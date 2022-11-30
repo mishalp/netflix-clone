@@ -33,10 +33,10 @@ function RowPost(props) {
         setUrlId(res.data.results[0])
       }
       else{
-        console.log('array empty');
+        alert('No item to display')
       }
     }).catch((err)=>{
-      console.log(err);
+      alert('Not Found')
     })
   }
   
@@ -48,7 +48,12 @@ function RowPost(props) {
             <img onClick={()=>handleMovie(obj.id)} key={key} className={props.isSmall ? 'small-poster': 'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
           )}
         </div>
-        { urlId && <YouTube videoId={urlId.key} opts={opts} />}
+
+        
+        { urlId && <div className="video-div">
+            <button onClick={()=>{setUrlId('')}}>X</button>
+            <YouTube className="video-div-inner" videoId={urlId.key} opts={opts} />
+        </div>}
     </div>
   )
 }

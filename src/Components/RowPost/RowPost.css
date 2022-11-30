@@ -31,3 +31,48 @@
 .poster:hover, .small-poster:hover{
     transform: scale(1.1);
 }
+
+.video-div{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .video-div-inner{
+    position: relative;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.9);
+    box-shadow: black 0px 0px 200px 150px;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .video-div > button{
+    color: white;
+    z-index: 1;
+    padding: 6px 10px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .video-div > button:hover{
+    background-color: white;
+    color: black;
+  }
